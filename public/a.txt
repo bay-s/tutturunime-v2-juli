@@ -1,0 +1,15 @@
+# Allow all user agents
+User-agent: Googlebot
+Allow: /
+
+# Disallow specific folders
+Disallow: /pages/api/
+
+# Host
+Host: https://www.tutturunime.my.id
+
+# Sitemaps
+Sitemap: https://www.tutturunime.my.id/sitemap.xml
+Sitemap: https://www.tutturunime.my.id/server-sitemap-index.xml
+
+goridar374@jucatyo.com

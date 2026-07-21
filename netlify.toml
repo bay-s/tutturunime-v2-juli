@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # optional: pin node version for Netlify if required
+  NODE_VERSION = "18"

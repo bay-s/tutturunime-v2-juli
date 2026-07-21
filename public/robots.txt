@@ -1,0 +1,11 @@
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /pages/api/
+
+# Host
+Host: https://www.tutturunime.my.id
+
+# Sitemaps
+Sitemap: https://www.tutturunime.my.id/sitemap.xml
+Sitemap: https://www.tutturunime.my.id/server-sitemap-index.xml
