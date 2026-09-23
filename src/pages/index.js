@@ -106,7 +106,7 @@ console.log("________________________");
             rekomen:rek?.rekomen ?? null,
           },
         },
-        revalidate: 60 * 59, // ISR
+        revalidate: 60 * 58, // ISR
       };
     } else {
       throw new Error('Failed to fetch data');
