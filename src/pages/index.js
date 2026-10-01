@@ -15,7 +15,7 @@ import { getRekomen } from '@/lib/scrapper-rekomen';
 export default function Home({data}) {
   const  siteInfo   = useContext(ValueContext)
   const logo = "/img/mayuri.png"
-  // console.log(data);
+  console.log(data);
   return (
 <Fragment>
 <OGPTags />
@@ -41,7 +41,7 @@ export default function Home({data}) {
  
 <section className='grid grid-cols-4 lg:gap-0 gap-12 my-2'>
 <HomePage data={data} />
-  <HomeSidebar rec={data?.rekomen} />
+<HomeSidebar rec={data?.rekomen} />
 </section>
  
 </Fragment>
@@ -52,9 +52,9 @@ export default function Home({data}) {
 export async function getStaticProps() {
   try {
     const path = process.env.NEXT_PUBLIC_ABSOLUTE_PATH;
-    const dats = await getOngoing(1)
-    const oploverz = await getAnimeOngoingOplovers(1)
-    const rek = await getRekomen()
+    const oploverzCH = await getOngoing(1)
+    // const oploverz = await getAnimeOngoingOplovers(1)
+    // const rek = await getRekomen()
     // const response = await axios.get(`${path}/api/v1/ongoing?page=1`, {
     //   next: {
     //     revalidate: 86400, 
@@ -77,33 +77,35 @@ export async function getStaticProps() {
     // })
     
 
-    const [ongoingRes ] = await Promise.all([
-      fetch(`${path}/api/v1/ongoing?page=1`, {
-        next: { revalidate: 3600 }, // 1 jam cache
-      }),
-      // fetch(`${path}/api/v1/ongoing-oploverz?page=1`, {
-      //   next: { revalidate: 3600 },
-      // }),
-      // fetch(`${path}/api/v1/rekomen`, {
-      //   next: { revalidate: 3600 },
-      // }),
-    ]);
+    // const [ongoingRes ] = await Promise.all([
+    //   fetch(`${path}/api/v1/ongoing?page=1`, {
+    //     next: { revalidate: 3600 }, // 1 jam cache
+    //   }),
+      
+    //   // fetch(`${path}/api/v1/ongoing-oploverz?page=1`, {
+    //   //   next: { revalidate: 3600 },
+    //   // }),
+    //   // fetch(`${path}/api/v1/rekomen`, {
+    //   //   next: { revalidate: 3600 },
+    //   // }),
 
-    const ongoing = await ongoingRes.json();
+    // ]);
+
+    // const ongoing = await ongoingRes.json();
     //  const oplovers = await oploverzRes.json();
     // const rec = await recRes.json();
  console.log("data");
  
 console.log("________________________");
-    if (ongoingRes.status === 200) {
+    if (oploverzCH) {
  
       return {
         props: {
           data: {
-            ongoing:dats?.ongoing,
-            pagination:ongoing.pagination,
-            oploverz:oploverz?.ongoing,
-            rekomen:rek?.rekomen ?? null,
+            ongoing:oploverzCH?.ongoing,
+            // pagination:ongoing.pagination,
+            // oploverz:oploverz?.ongoing,
+            // rekomen:rek?.rekomen ?? null,
           },
         },
         revalidate: 60 * 58, // ISR

@@ -19,7 +19,7 @@ const HomeSidebar = () => {
          <div className="dark:bg-dark-gray shadow-lg bg-gray-100 dark:shadow rounded-md flex items-center p-3">
          <ChatangoChat />
          </div>
-         <JadwalSidebar jadwal={jadwal}/>
+         {/* <JadwalSidebar jadwal={jadwal}/> */}
           <AdsterraAd />
         </aside>
     )
