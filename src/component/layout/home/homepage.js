@@ -15,7 +15,7 @@ const HomePage = ({ data }) => {
   return (
     <div className="col-span-4 lg:col-span-3 flex flex-col gap-14 font-roboto">
    <HomepageTitle title="Ongoing Stream" path="/ongoing/page/2" link={`data?.ongoing.pagination`}>
-        {data?.ongoing.slice(1, 11).map((item) => {
+        {data?.ongoing.slice(1, 16).map((item) => {
           return isLoading ? (
             <LoaderCard />
           ) : (

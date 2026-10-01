@@ -104,8 +104,8 @@ const  SingleEpisodePage = ({episode,anilist}) => {
 <DisqussComment anime={episode} slug={router.asPath} />
  </div>
 </div>
-{/* 
-<HomeSidebar  /> */}
+
+<HomeSidebar  />
 </section>
 
  
