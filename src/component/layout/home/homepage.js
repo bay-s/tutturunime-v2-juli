@@ -24,7 +24,7 @@ const HomePage = ({ data }) => {
         })}
       </HomepageTitle>
  
-      {/* <HomepageTitle title="Ongoing Download" path="/ongoing" link={data?.ongoing.pagination}>
+      <HomepageTitle title="Ongoing Download" path="/ongoing" link={data?.ongoing.pagination}>
         {data?.oploverz?.map((item) => {
           return isLoading ? (
             <LoaderCard />
@@ -54,7 +54,7 @@ const HomePage = ({ data }) => {
             <AnimeCard anime={item} type="completed" slugType="oploverz" key={item.title} />
           );
         })}
-      </HomepageTitle> */}
+      </HomepageTitle>
     </div>
   );
 };
