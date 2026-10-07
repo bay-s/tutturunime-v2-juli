@@ -23,12 +23,12 @@ export default function App({ Component, pageProps ,siteInfo}) {
 <Head>
   <link rel="icon" href={logo}></link>
 </Head>
-{/* <ValueProvider siteInfo={siteInfo}>
+<ValueProvider siteInfo={siteInfo}>
       <MainLayout>
            <Component {...pageProps} />
       </MainLayout>
 <MyScript />
-</ValueProvider> */}
+</ValueProvider>
 </ErrorBoundary>
   )
 
