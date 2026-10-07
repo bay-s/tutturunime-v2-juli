@@ -15,7 +15,7 @@ const ModalSearch = ({isOpen,openSearchModal}) => {
     const {value} = e.target
     setSearchValue(value)
     const path = process.env.NEXT_PUBLIC_ABSOLUTE_PATH
-    const response = await axios.get(`${path}/api/v1/search-anime?title=${value}`);
+    const response = await axios.get(`api/v1/search-anime?title=${value}`);
     if (response.status === 200) {
          setSearchResult(response.data)
          setIsLoading(false)
