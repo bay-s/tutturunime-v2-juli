@@ -1,13 +1,18 @@
- 
+// next.config.js
+const isDev = process.env.NODE_ENV === 'development';
+
 const nextConfig = {
   webpack5: true,
   optimizeFonts: true,
-  compress: true,  
+  compress: true,
   reactStrictMode: true,
   images: {
     unoptimized: true,
   },
+
   async rewrites() {
+    if (!isDev) return [];
+
     return [
       {
         source: '/api/v1/:path*',
@@ -15,9 +20,6 @@ const nextConfig = {
       },
     ];
   },
-}
+};
 
-
-// next.config.js
-  
-module.exports = nextConfig
+module.exports = nextConfig;   
