@@ -9,6 +9,7 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import MyScript from '@/component/layout/header/script';
 import { getJadwalList } from '@/lib/scrapper-jadwal';
+import AdsterraAd from '../lib/adsterra';
  
 export default function App({ Component, pageProps ,siteInfo}) {
   useEffect(() => {
@@ -23,6 +24,8 @@ export default function App({ Component, pageProps ,siteInfo}) {
 <Head>
   <link rel="icon" href={logo}></link>
 </Head>
+<MyScript />
+<AdsterraAd />
 <ValueProvider siteInfo={siteInfo}>
       <MainLayout>
            <Component {...pageProps} />

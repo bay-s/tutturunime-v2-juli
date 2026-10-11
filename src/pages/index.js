@@ -12,6 +12,7 @@ import { getAnimeOngoingOplovers } from '@/lib/scrapper-ongoing-oploverz';
 import { getRekomen } from '@/lib/scrapper-rekomen';
 
 
+
 export default function Home({data}) {
   const  siteInfo   = useContext(ValueContext)
   const logo = "/img/mayuri.png"
@@ -19,6 +20,7 @@ export default function Home({data}) {
   return (
 <Fragment>
 <OGPTags />
+
 <NextSeo
        title={`${siteInfo?.menus?.menu?.siteName} - Tempat Download dan Nonton Anime subtitle indonesia`}
        description={`${siteInfo?.menus?.menu?.siteName} adalah Tempat Nonton anime subtitle indonesia dan download Batch, Tersedia berbagai resolusi ,360 ,480p , 720p, 1080p , mp4 dan mkv.`}
