@@ -25,13 +25,13 @@ export default function App({ Component, pageProps ,siteInfo}) {
   <link rel="icon" href={logo}></link>
 </Head>
 <MyScript />
-<AdsterraAd />
+{/* <AdsterraAd />
 <ValueProvider siteInfo={siteInfo}>
       <MainLayout>
            <Component {...pageProps} />
       </MainLayout>
 <MyScript />
-</ValueProvider>
+</ValueProvider> */}
 </ErrorBoundary>
   )
 

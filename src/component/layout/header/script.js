@@ -15,9 +15,13 @@ export default function MyScript() {
           src="https://biodegradable-tune.com/djmfF/z.deGaNFvGZgGlUE/leqmD9yuIZkUHl/k/PUTxYe2_MSjzEUzANqzWIjtcNZj_YayaMQTdMD3/MFyxZismabWd1QpUdZD/0/xD"
            
         />
+{/* SOCIAL BAR ADS */}
 <Script async src="https://variationconfused.com/d9/53/db/d953db47be8a799e8cbe343110f99daf.js"></Script>
-<Script async src="https://variationconfused.com/c7/b9/ca/c7b9ca613d7d6b1562a81ab7c3742e84.js"></Script>
-<Script type='text/javascript' src='//mapdevelopcleverness.com/d9/53/db/d953db47be8a799e8cbe343110f99daf.js' /> 
+{/* SOCIAL BAR ADS */}
+{/* POP UNDER */}
+{/* <Script async src="https://variationconfused.com/c7/b9/ca/c7b9ca613d7d6b1562a81ab7c3742e84.js"></Script> */}
+{/* POP UNDER */}
+{/* <Script type='text/javascript' src='//mapdevelopcleverness.com/d9/53/db/d953db47be8a799e8cbe343110f99daf.js' />  */}
     {/* <Script
           src="https://fpyf8.com/88/tag.min.js"
           data-zone="166083" async data-cfasync="false"
