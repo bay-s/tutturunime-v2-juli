@@ -26,12 +26,12 @@ export default function App({ Component, pageProps ,siteInfo}) {
 </Head>
 <MyScript />
 <AdsterraAd />
-{/* <ValueProvider siteInfo={siteInfo}>
+<ValueProvider siteInfo={siteInfo}>
       <MainLayout>
            <Component {...pageProps} />
       </MainLayout>
 <MyScript />
-</ValueProvider> */}
+</ValueProvider>
 </ErrorBoundary>
   )
 
