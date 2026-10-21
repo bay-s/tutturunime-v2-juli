@@ -16,7 +16,7 @@ export default function MyScript() {
            
         />
 {/* SOCIAL BAR ADS */}
-{/* <Script async src="https://variationconfused.com/d9/53/db/d953db47be8a799e8cbe343110f99daf.js"></Script> */}
+<Script async src="https://variationconfused.com/d9/53/db/d953db47be8a799e8cbe343110f99daf.js"></Script>
 {/* SOCIAL BAR ADS */}
 {/* POP UNDER */}
 {/* <Script async src="https://variationconfused.com/c7/b9/ca/c7b9ca613d7d6b1562a81ab7c3742e84.js"></Script> */}
