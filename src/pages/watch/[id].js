@@ -36,8 +36,8 @@ const  SingleEpisodePage = ({episode,anilist}) => {
    const video = useRef(null)
    const tabsData = TabsComponentDownload(anilist,episode,'episode')
   
-//  console.log(episode);
-//  console.log(anilist);
+ console.log(episode);
+ console.log(anilist);
     return(
 <Fragment>
 <MetaHead title={episode?.epsTitle} description={`Download dan nonton anime ${episode?.epsTitle} Sub indo , Berbagai resolusi ,360p , 480p , 720p , 1080p, MP4 dan MKV Hanya di ${siteInfo?.menus?.globalSeo?.siteName}`} slug={router.asPath} image={!anilist?.bannerImage  ? episode?.thumb : anilist?.bannerImage} />
@@ -150,13 +150,20 @@ export default SingleEpisodePage
    
       const epsSlug = ongoingPagination?.nextPrevVideo?.find(text => text.text === "All Episodes")?.link;
 
-      const epsList = await getDetailEpisodeOploverz(epsSlug)
+// Tangani potensi error hanya pada pengambilan epsList
+let epsList = null;
+try {
+  epsList = await getDetailEpisodeOploverz(epsSlug);
+} catch (error) {
+  console.error("Gagal mengambil episode list:", error.message);
+  // epsList akan tetap bernilai null, proses tidak berhenti di sini
+}
 
       if (ongoingPagination) {
         const aniList = await getAnilistByTitle(ongoingPagination?.originalTitle.trim())
         const data = {
           ...ongoingPagination,
-          episodeList: epsList?.linkEpisode
+          episodeList: epsList?.linkEpisode ?? []
         }
    
         return {

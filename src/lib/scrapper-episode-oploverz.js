@@ -101,7 +101,9 @@ export async function getEpisodeAnime(title) {
 
    cache[cacheKey] = result;
    lastFetch[cacheKey] = Date.now();
-
+   console.log("++++++++++++++++++")
+   console.log(result)
+   console.log("++++++++++++++++++")
    return result
 
       } catch (error) {

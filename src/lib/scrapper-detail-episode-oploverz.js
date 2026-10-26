@@ -66,12 +66,14 @@ export async function getDetailEpisodeOploverz(title) {
 
    cache[cacheKey] = result;
    lastFetch[cacheKey] = Date.now();
-          
+   console.log("-------------")
+   console.log(result)
+   console.log("--------------")
    return result
-
+ 
       } catch (error) {
         console.error(error);
-        throw new Error("Scraping failed");
+        throw new Error("Scraping detail episode failed");
       }
  
   }
